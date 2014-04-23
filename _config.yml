@@ -1,0 +1,17 @@
+# config
+cover: //25.media.tumblr.com/tumblr_m599f8mu0a1rvf4w6o1_1280.jpg
+logo: //blog.ghost.org/content/images/2013/Nov/bloglogo_1-1.png
+bio: 'Programmer. Clojure. Functional Programming. Emacs.'
+
+# Content
+excerpt_link: Read More
+
+# Miscellaneous
+rss:
+google_analytics: UA-2098194-3
+
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  About: /about

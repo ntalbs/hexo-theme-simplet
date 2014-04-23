@@ -1,0 +1,51 @@
+<nav class="main-nav">
+  <div class="container">
+    <ul>
+      <% for (var i in theme.menu){ %>
+        <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+      <% } %>
+    </ul>
+  </div>
+</nav>
+<header class="site-head">
+  <div class="vertical">
+    <div class="site-head-content inner">
+      <% if (theme.logo) { %> <a class="blog-logo" href="<%- config.root %>"><img src="<%- theme.logo %>" alt="Blog Logo"/></a> <% } %>
+      <h1 class="blog-title"><%- config.title %></h1>
+      <h2 class="blog-description"><%- config.subtitle %></h2>
+    </div>
+  </div>
+</header>
+
+<main class="content" role="main">
+
+<div class="post">
+  <% if (site.tags.length){ %>
+    <div class="widget">
+      <ul class="tag-box inline list-unstyled">
+      <% site.tags.sort('name').each(function(item){ %>
+        <li><a href="#<%= item.name %>"><%= item.name %><span><%= item.posts.length %></span></a></li>
+      <% }); %>
+      </ul>
+    </div>
+
+    <div class="archive">
+      <% site.tags.sort('name').each(function(item){ %>
+
+      <h4 class="archive-ul show" data-toggle="collapse" id="<%= item.name %>" data-target="#modal-<%= item.name %>"> <%= item.name %> <b class="caret"></b></h4>
+         <ul id="modal-<%= item.name %>" class="collapse in">
+
+         <% site.posts.sort('date', -1).forEach(function(it){ %>
+           <% if (it.tags._index.indexOf(item._id) > -1){ %>
+               <li class="listing-item"><h5 class="post-title"><a href="<%= config.root %><%= it.path %>" <% if (it.description) { %> title="<%= it.description %>" <% } %>><%= it.title %></a></h5></li>
+          <% } %>
+         <% }); %>
+
+         </ul>
+      <% }); %>
+      </ul>
+    </div>
+  <% } %>
+</div>
+
+</main>
