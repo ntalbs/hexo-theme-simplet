@@ -1,8 +1,9 @@
-<%- partial('header')%>
+<%- partial('nav')%>
+<%- partial('sitehead')%>
 
-<main class="content" role="main">
+<main class="container" role="main">
   <% page.posts.each(function(post) { %>
-  <article class="post-archive">
+  <article class="post-archive col-md-9">
     <header class="post-header">
       <span class="post-meta">
         <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, null) %></time>
