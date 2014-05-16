@@ -3,7 +3,7 @@
 
 <main class="container" role="main">
   <% page.posts.each(function(post) { %>
-  <article class="post col-md-9">
+  <article class="post">
     <header class="post-header">
       <span class="post-meta">
         <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, null) %></time>
