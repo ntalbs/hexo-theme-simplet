@@ -46,7 +46,6 @@
 /* General - Setting up some base styles */
 
 body
-  padding-top 50px
   font-size 2.0rem
   line-height 1.6em
 
@@ -59,6 +58,8 @@ h1, h2, h3, h4, h5, h6
   line-height 1
   margin-top 0
   font-family 'Open Sans', sans-serif
+  a
+    color #50585d
 
 h1
   font-size 3.5rem
@@ -85,8 +86,205 @@ h5
 h6
   font-size 1.8rem
 
+p
+  text-align justify
 
+a
+  color #2773B8
+  transition color ease 0.3s
+  &:hover
+    color #57A3E8
 
+strong
+  color red
+  font-weight normal
+
+em
+  color blue
+  font-style normal
+
+p, ul, ol, dl
+  margin 1.2em 0
+
+ol ol, ul ul, ul ol, ol ul
+  margin 0.4em 0
+
+hr
+  display block
+  height 1px
+  border 0
+  border-top 1px solid #efefef
+  margin 3.2em 0
+  padding 0
+
+blockquote
+  -moz-box-sizing border-box
+  box-sizing border-box
+  margin 1.6em 0 1.6em 0
+  padding 0 0 0 1.6em
+  border-left #4a4a4a 0.4em solid
+  p
+    margin 0.8rem 0
+    font-style normal
+    color green
+  small
+    display inline-block
+    margin 0.8em 0 0.8em 1.5em
+    font-size:0.8em;
+    color #ccc
+    &:before
+      content '\2014 \00A0'
+  cite
+    font-weight bold;
+    a
+      font-weight norma
+
+mark
+  background-color #ffc336
+
+code, tt
+  padding 1px 3px
+  font-family Inconsolata, monospace, sans-serif
+  font-size 0.85em
+  white-space pre-wrap
+  border 1px solid #E3EDF3
+  background #F7FAFB
+  border-radius 2px
+
+pre
+  -moz-box-sizing border-box
+  box-sizing border-box
+  margin 1.6em 0
+  border 1px solid #E3EDF3
+  width 100%
+  padding 10px
+  font-family Inconsolata, monospace, sans-serif
+  font-size 0.9em
+  white-space pre
+  overflow auto
+  background #F7FAFB
+  border-radius 3px
+  line-height 1.2em
+  overflow-x scroll
+  code, tt
+    font-size inherit
+    white-space -moz-pre-wrap
+    white-space pre-wrap
+    background transparent
+    border none
+    padding 0
+
+kbd
+  display inline-block
+  margin-bottom 0.4em
+  padding 1px 8px
+  border #ccc 1px solid
+  color #666
+  text-shadow #fff 0 1px 0
+  font-size 0.9em
+  font-weight bold
+  background #f4f4f4
+  border-radius 4px
+  box-shadow 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
+
+table
+  -moz-box-sizing border-box
+  box-sizing border-box
+  margin 1.6em 0
+  width 100%
+  max-width 100%
+  background-color transparent
+  th, td
+    padding 8px
+    line-height 20px
+    text-align left
+    vertical-align top
+    border-top 1px solid #efefef
+  th
+    color #000
+  caption + thead tr:first-child th, caption + thead tr:first-child td,
+  colgroup + thead tr:first-child th, colgroup + thead tr:first-child td,
+  thead:first-child tr:first-child th, thead:first-child tr:first-child td
+    border-top 0
+  tbody > tr:nth-child(odd) > td, tbody > tr:nth-child(odd) > th
+    background-color #f6f6f6
+  .plain tbody > tr:nth-child(odd) > td, .plain tbody > tr:nth-child(odd) > th
+    background transparent
+
+/* General - The main styles for thie theme */
+
+.site-head, .page-head
+  margin-bottom 5rem
+  color #b9c8e0
+  background-color #1d365d
+  padding 100px 15px 50px
+
+.blog-title
+  color #fff
+  font-size 6rem
+  font-face bold
+  margin-bottom 0
+
+.blog-description
+  font-size 1.6rem
+  line-height 2rem
+  margin-top 0
+
+.page-head .post-title
+  color #fff
+  font-size 4rem
+  font-face bold
+  padding-top 18px
+  padding-bottom 8px
+  margin-bottom 0
+
+/* Every post, on every page */
+.post
+  clear right
+  text-align justify
+  position relative
+  padding-bottom 4rem
+  border-bottom #EBF2F6 1px solid
+  word-break break-word
+  hyphens auto
+  li
+    text-align left
+  /* Add a little circle in the middle of the border-bottom on our .post
+     just for the lolz and stylepoints. */
+  &:after
+    display block
+    content ""
+    width 7px
+    height 7px
+    border #E7EEF2 1px solid
+    position absolute
+    bottom -5px
+    left 50%
+    margin-left -5px
+    background #fff
+    -webkit-border-radius 100%
+    -moz-border-radius 100%
+    border-radius 100%
+    box-shadow #fff 0 0 0 5px
+
+/* Every post in `archive` page */
+.post-archive
+  clear right
+  text-align left
+  position relative
+  padding-bottom 2rem
+  word-break break-word
+  hyphens auto
+
+.post-title a
+  text-decoration none
+
+.post-meta
+  display inline-block
+  font-size 1.6rem
+  padding-top 0
+  margin-top 0
+  margin-bottom 14px
 
 selection()
   color #222
@@ -99,9 +297,17 @@ selection()
 selection
   selection()
 
+.widget
+  padding-bottom 30px
+  border-bottom 1px solid gray
+  margin-bottom 30px
+
 .tag-box
   margin 0
   overflow hidden
+  // padding 10px
+  // border 1px solid #1d365d
+  // border-radius 5px
   &.inline li
     float left
   a
@@ -124,6 +330,57 @@ selection
 .list-unstyled
   list-style none
   padding-left 0
+
+.archive-ul
+  padding-top 50px
+  margin-top -50px
+
+
+/* Pagination */
+
+.pagination
+  position relative
+  width 100%
+  max-width 750px
+  margin 4rem auto
+  font-family 'Open Sans', sans-serif
+  font-size 1.3rem
+  color #9EABB3
+  text-align center
+  a
+    color #9EABB3
+
+/* Push the previous/next links out to the left/right */
+.older-posts, .newer-posts
+  position absolute
+  display inline-block
+  padding 0 15px
+  border #EBF2F6 2px solid
+  text-decoration none
+  border-radius 10px
+  transition border ease 0.3s
+  &:hover
+    border-color #9EABB3
+    text-decoration none
+
+.older-posts
+  right 0
+
+.page-number
+  display inline-block
+  padding 2px 0
+
+.newer-posts
+  left 0
+
+
+
+
+
+
+
+
+/* Footer */
 
 .site-footer
   position relative
@@ -151,3 +408,7 @@ selection
   .icon-ghost:before
     font-size 1rem
     margin-right 0.2em
+
+/* Override bootstrap classes */
+.container
+  max-width 750px
