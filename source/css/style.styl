@@ -518,9 +518,21 @@ pre .chunk
 #article-nav-older
   float right
   text-decoration none
+  text-align right
   &:after
     content "\f061"
     padding-left 10px
+
+.article-nav-title
+  display inline-block
+  vertical-align middle
+  width 250px
+  max-width 250px
+  margin 0
+  padding 0
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
 
 .share
   padding-bottom 20px
@@ -671,6 +683,10 @@ pre .chunk
       width auto
       a
         margin 1.4rem 0.8rem 0 0.8rem
+
+  .article-nav-title
+    max-width 200px
+
 
   .older-posts, .newer-posts
     position static
