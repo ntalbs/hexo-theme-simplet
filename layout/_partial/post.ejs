@@ -33,20 +33,12 @@
         <% if (post.prev){ %>
         <a href="<%- config.root %><%- post.prev.path %>" id="article-nav-newer" class="article-nav-link-wrap">
           <strong class="article-nav-caption">Prev</strong>
-          <span class="article-nav-title">
-            <% if (post.prev.title){ %>
-            <%= post.prev.title %>
-            <% } else { %>
-            (no title)
-            <% } %>
-          </span>
+          <span class="article-nav-title"><%= (post.prev.title) ? post.prev.title : "(no title)" %></span>
         </a>
         <% } %>
         <% if (post.next){ %>
         <a href="<%- config.root %><%- post.next.path %>" id="article-nav-older" class="article-nav-link-wrap">
-          <span class="article-nav-title">
-            <%= post.next.title %>
-          </span>
+          <span class="article-nav-title"><%= (post.next.title) ? post.next.title : "(no title)" %></span>
           <strong class="article-nav-caption">Next</strong>
         </a>
         <% } %>
