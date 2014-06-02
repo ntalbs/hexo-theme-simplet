@@ -39,7 +39,7 @@
         <% if (post.next){ %>
         <a href="<%- config.root %><%- post.next.path %>" id="article-nav-older" class="article-nav-link-wrap">
           <span class="article-nav-title"><%= (post.next.title) ? post.next.title : "(no title)" %></span>
-          <strong class="article-nav-caption label label-primary">Next</strong>
+          <strong class="article-nav-caption label label-danger">Next</strong>
         </a>
         <% } %>
       </nav>
