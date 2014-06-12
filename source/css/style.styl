@@ -360,48 +360,6 @@ selection
   position relative
   top -15px
 
-
-/* Pagination */
-
-.pagination
-  position relative
-  width 100%
-  max-width 750px
-  margin 4rem auto
-  font-family 'Open Sans', sans-serif
-  font-size 1.3rem
-  color #9EABB3
-  text-align center
-  a
-    color #9EABB3
-
-/* Push the previous/next links out to the left/right */
-.older-posts, .newer-posts
-  position absolute
-  display inline-block
-  padding 0 15px
-  border #EBF2F6 2px solid
-  text-decoration none
-  border-radius 10px
-  transition border ease 0.3s
-  &:hover
-    border-color #9EABB3
-    text-decoration none
-
-.older-posts
-  right 0
-
-.page-number
-  display inline-block
-  padding 2px 0
-
-.newer-posts
-  left 0
-
-
-
-
-
 /* Theme: Solarized - Github
  * More theme here: http://softwaremaniacs.org/media/soft/highlight/test.html
  */
@@ -538,6 +496,38 @@ pre .chunk
   padding-bottom 20px
   margin-bottom 20px
   border-bottom 1px solid #ebf2f6
+
+/* Pagination */
+
+#page-nav
+  width: 100%
+  margin-top 30px
+  text-align center
+  a
+    vertical-align middle
+    text-decoration none
+  .page-number, .prev, .next
+    font-size 90%
+    margin-left 5px
+    margin-right 5px
+  .prev, .next
+    white-space nowrap
+    font-family icomoon
+    vertical-align top
+  .prev
+    margin-right 20px
+    &:before
+      content '\f060'
+      margin-right 5px
+      vertical-align middle
+  .next
+    margin-left 20px
+    color #d9534f
+    text-align right
+    &:after
+      content '\f061'
+      margin-left 5px
+      vertical-align middle
 
 #comment
   clear both
