@@ -27,9 +27,7 @@
     </section>
   </article>
   <% }); %>
-  <nav class="pagination" role="pagination">
-    <% if (page.prev) { %><a class="newer-posts" href="<%- config.root %><%- page.prev_link %>">← Newer Posts</a><% } %>
-    <span class="page-number">Page <%- page.current %> of <%- page.total %></span>
-    <% if (page.next) { %><a class="older-posts" href="<%- config.root %><%- page.next_link %>">Older Posts →</a><% } %>
+  <nav id="page-nav">
+    <%- paginator({mid_size: 5, prev_text: '<strong class="article-nav-caption label label-primary">Prev</strong>', next_text: '<strong class="article-nav-caption label label-danger">Next</strong>'}) %>
   </nav>
 </main>
