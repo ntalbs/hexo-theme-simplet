@@ -24,9 +24,11 @@
   <% }); %>
     </ul>
 
+  <% if (page.prev || page.next) { %>
   <nav class="pagination" role="pagination">
     <% if (page.prev) { %><a class="newer-posts" href="<%- config.root %><%- page.prev_link %>">← Newer Posts</a><% } %>
     <span class="page-number">Page <%- page.current %> of <%- page.total %></span>
     <% if (page.next) { %><a class="older-posts" href="<%- config.root %><%- page.next_link %>">Older Posts →</a><% } %>
   </nav>
+  <% } %>
 </main>
