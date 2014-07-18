@@ -1,7 +1,10 @@
-<header class="site-head">
-  <div class="container">
-    <h1 class="blog-title"><%- config.title %></h1>
-    <h2 class="blog-subtitle"><%- config.subtitle %></h2>
-    <p class="blog-description"><%- config.description %></p>
+<header class="site-head" <% if (theme.cover) { %> style="background-image: url(<%- theme.cover %>)" <% } %>>
+  <div class="vertical">
+    <div class="container">
+      <div class="site-head-content inner">
+        <h1 class="blog-title"><%- config.title %></h1>
+        <p class="blog-description"><%- config.description %></p>
+      </div>
+    </div>
   </div>
 </header>
