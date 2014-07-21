@@ -248,14 +248,9 @@ table
   padding 100px 15px 50px
   p
     text-align left
-
-.site-head .vertical
-  display table-cell
-  vertical-align middle
-
-.page-head .vertical
-  display table-cell
-  vertical-align bottom
+  .vertical
+    display table-cell
+    vertical-align bottom
 
 .blog-title
   color #fff
@@ -595,11 +590,11 @@ pre .chunk
 @media only screen and (max-width: 900px)
   blockquote
     margin-left 0
-  .site-head
+  .site-head, .page-head
     -webkit-box-sizing border-box
     -moz-box-sizing border-box
     box-sizing border-box
-    height auto
+    height 25%
   .blog-title
     font-size 4rem
     letter-spacing -1px
@@ -647,7 +642,7 @@ pre .chunk
     img
       max-width 450px
 
-  .site-head
+  // .site-head, .page-head
 
   .blog-title
     font-size 2.5rem
