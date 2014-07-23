@@ -1,6 +1,5 @@
 # config
-
-brand: @ntalbs
+brand: ntalbs
 cover: /images/swiss-grindelwald.jpg
 
 # Content
@@ -14,3 +13,4 @@ menu:
   Archives: /archives
   Tags: /tags
   About: /about
+
