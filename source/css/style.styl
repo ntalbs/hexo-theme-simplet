@@ -167,22 +167,24 @@ code, tt
   font-size 0.85em
   white-space pre-wrap
   color inherit
-  // border 1px solid #E3EDF3
-  background #F7FAFB
+  border none
+  //border 1px solid #E3EDF3
+  background #eee
   border-radius 2px
 
 pre
   -moz-box-sizing border-box
   box-sizing border-box
   margin 1.6em 0
-  border 1px solid #E3EDF3
+  //border 1px solid #E3EDF3
+  border none
   width 100%
   padding 10px
   font-family Inconsolata, monospace, sans-serif
-  font-size 0.85em
+  font-size 0.8em
   white-space pre
   overflow auto
-  background #F7FAFB
+  background #eee
   border-radius 3px
   line-height 1.2em
   overflow-x scroll
@@ -223,13 +225,14 @@ table
     border-top 1px solid #efefef
   th
     color #000
+    background-color #ccc
   caption + thead tr:first-child th, caption + thead tr:first-child td,
   colgroup + thead tr:first-child th, colgroup + thead tr:first-child td,
   thead:first-child tr:first-child th, thead:first-child tr:first-child td
     border-top 0
-  tbody > tr:nth-child(odd) > td, tbody > tr:nth-child(odd) > th
+  tbody > tr:nth-child(even) > td, tbody > tr:nth-child(even) > th
     background-color #f6f6f6
-  .plain tbody > tr:nth-child(odd) > td, .plain tbody > tr:nth-child(odd) > th
+  .plain tbody > tr:nth-child(even) > td, .plain tbody > tr:nth-child(even) > th
     background transparent
 
 
@@ -595,7 +598,6 @@ pre .chunk
     -webkit-box-sizing border-box
     -moz-box-sizing border-box
     box-sizing border-box
-    height 25%
   .blog-title
     font-size 4rem
     letter-spacing -1px
