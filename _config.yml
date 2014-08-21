@@ -1,6 +1,6 @@
 # config
 brand: ntalbs
-cover: /images/swiss-grindelwald.jpg
+cover: /images/train.jpg
 
 # Content
 excerpt_link: Read More
@@ -13,4 +13,3 @@ menu:
   Archives: /archives
   Tags: /tags
   About: /about
-
