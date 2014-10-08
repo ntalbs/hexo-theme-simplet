@@ -1,6 +1,6 @@
 # config
-brand: ntalbs
-cover: /images/train.jpg
+brand: '@ntalbs'
+cover: /images/nz-lake-tekapo.jpg
 
 # Content
 excerpt_link: Read More
