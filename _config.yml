@@ -1,14 +1,13 @@
 # config
-brand: '@ntalbs'
-cover: /images/nz-lake-tekapo.jpg
+brand: "@ntalbs' stuff"
 
 # Content
 excerpt_link: Read More
 
 # Miscellaneous
-rss:
 google_analytics: UA-2098194-3
 
+# Navigation
 menu:
   Archives: /archives
   Tags: /tags
