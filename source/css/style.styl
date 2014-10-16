@@ -371,16 +371,21 @@ selection
   padding-left 0
 
 .archive-ul
-  font-size 2.8rem
+  font-size 2.4rem
   font-weight bold
   color #444
-  padding-top 50px
-  margin-top -50px
   cursor pointer
 
-.listing-item .post-meta
-  position relative
-  top -15px
+.listing-item
+  .post-title
+    text-align left
+    line-height 0.8
+  .post-meta
+    vertical-align super
+    &:before
+      content "("
+    &:after
+      content ")"
 
 /* from bootstrap */
 .caret
