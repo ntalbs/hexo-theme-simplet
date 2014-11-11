@@ -169,38 +169,33 @@ blockquote
 mark
   background-color #ffc336
 
-code, tt
+code
   padding 1px 3px
-  font-family Inconsolata, monospace, sans-serif
+  font-family Consolas, "Liberation Mono", Menlo, Courier, monospace
   font-size 0.85em
   white-space pre-wrap
-  color inherit
+  color #339
   border none
-  //border 1px solid #E3EDF3
   background #eee
   border-radius 2px
+
+figure
+  margin 10px
+  padding 10px
+  border 1px dashed #aaa
+  border-radius 5px
+  overflow auto
 
 pre
   -moz-box-sizing border-box
   box-sizing border-box
   margin 0
-  border 1px dashed #aaa
-  border-radius 5px
-  width 100%
-  min-width 560px
-  padding 10px
+  padding 0
   font-family Consolas, "Liberation Mono", Menlo, Courier, monospace
   font-size 0.8em
-  white-space pre
-  overflow auto
   line-height 1.2em
-  code, tt
-    font-size inherit
-    white-space -moz-pre-wrap
-    white-space pre-wrap
-    background transparent
-    border none
-    padding 0
+  white-space pre
+  word-break normal
 
 kbd
   display inline-block
@@ -635,10 +630,8 @@ selection
     font-size 1.1rem
 
   figure.hljs
-    padding 0
-    pre
-      padding 2px
-      min-width 480px
+    margin 0
+    padding 5px
 
 @media only screen and (max-width: 440px)
   .blog-description
