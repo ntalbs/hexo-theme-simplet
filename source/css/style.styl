@@ -88,6 +88,7 @@ h2
   font-size 2.4rem
   line-height 1.2em
   letter-spacing -1px
+  margin-top 1.4em
 
 h3
   font-size 2.0rem
@@ -179,7 +180,7 @@ code
   background #eee
   border-radius 2px
 
-figure
+figure.hljs
   margin 10px
   padding 10px
   border 1px dashed #aaa
@@ -192,10 +193,19 @@ pre
   margin 0
   padding 0
   font-family Consolas, "Liberation Mono", Menlo, Courier, monospace
-  font-size 0.8em
+  font-size 0.75em
   line-height 1.2em
   white-space pre
   word-break normal
+  letter-spacing -1px
+
+pre.console
+  margin 10px
+  padding 10px
+  border-radius 5px
+  color #eee
+  background-color #223
+  letter-spacing -1px
 
 kbd
   display inline-block
@@ -631,6 +641,10 @@ selection
 
   figure.hljs
     margin 0
+    padding 5px
+
+  pre.console
+    margin 5px 0
     padding 5px
 
 @media only screen and (max-width: 440px)
