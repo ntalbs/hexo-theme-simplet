@@ -3,8 +3,8 @@
 <% var year, prev_year = 0, first = true; %>
 
 <main class="container" role="main">
-  <% page.posts.each(function(post) { %>
-  <% year = post.date.toDate().getFullYear(); %>
+  <% site.posts.each(function(post) { %>
+  <% var year = post.date.year(); %>
     <% if (year !== prev_year) {%>
       </ul>
     <p class="archive-ul" data-toggle="collapse" data-target="#<%= year %>">
