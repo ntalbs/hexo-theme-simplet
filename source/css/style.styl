@@ -332,6 +332,32 @@ table
 .post-footer
   padding 8rem 0
 
+#progress
+  overflow hidden
+  left 0
+  top 50px
+  position fixed
+  height 8px
+  width 100%
+  background rgba(0,0,0,.2)
+  z-index 900
+  -moz-transition all .3s ease
+  -ms-transition all .3s ease
+  -o-transition all .3s ease
+  transition all .3s ease
+
+#bar
+  // background-color #089378
+  background-color #0898b3
+  width 0
+  height 100%
+  position relative
+  -webkit-transition all .3s
+  -moz-transition all .3s
+  -o-transition all .3s
+  -ms-transition all .3s
+  transition all .3s
+
 /* Every post in `archive` page */
 .post-archive
   clear right
