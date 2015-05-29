@@ -15,7 +15,8 @@
         wh = $(window).height(),          // window height
         offsetTop = $('.post-content').offset().top,
         y = $(document).scrollTop(),
-        progress = Math.min(100, y / (offsetTop + dh - wh) * 100);
+        base = Math.max(5, offsetTop + dh - wh),
+        progress = Math.min(100, y / base * 100);
     $('#bar').css({width: progress + '%'});
   });
 }(jQuery));
