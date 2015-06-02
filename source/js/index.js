@@ -2,7 +2,6 @@
  * Main JS file
  */
 
-/*globals jQuery, document */
 (function ($) {
   "use strict";
 
@@ -18,5 +17,11 @@
         base = Math.max(5, offsetTop + dh - wh),
         progress = Math.min(100, y / base * 100);
     $('#bar').css({width: progress + '%'});
+
+    if (y <= $('h1').offset().top) {
+      $('#progress').height('8px');
+    } else {
+      $('#progress').height('36px');
+    }
   });
 }(jQuery));
