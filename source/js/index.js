@@ -9,11 +9,15 @@
     $(".post-content").fitVids();
   });
 
-  var threshold = $('h1').offset().top + $('h1').height() - $('nav').height();
+  var threshold = $('h1').offset().top + $('h1').height() - $('nav').height(),
+      $postContent = $('.post-content'),
+      dh = $postContent.height(),       // document height
+      wh = $(window).height();          // window height
+
   $(document).scroll(function () {
-    var dh = $('.post-content').height(), // document height
-        wh = $(window).height(),          // window height
-        offsetTop = $('.post-content').offset().top,
+    if (!$postContent.length) return;
+
+    var offsetTop = $postContent.offset().top,
         y = $(document).scrollTop(),
         base = Math.max(5, offsetTop + dh - wh),
         progress = Math.min(100, y / base * 100);
