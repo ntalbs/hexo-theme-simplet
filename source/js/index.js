@@ -11,7 +11,7 @@
 
   var threshold = $('h1').offset().top + $('h1').height() - $('nav').height(),
       $postContent = $('.post-content'),
-      dh = $postContent.height(),       // document height
+      ph = $postContent.height(),       // post height
       wh = $(window).height();          // window height
 
   $(document).scroll(function () {
@@ -19,7 +19,7 @@
 
     var offsetTop = $postContent.offset().top,
         y = $(document).scrollTop(),
-        base = Math.max(5, offsetTop + dh - wh),
+        base = Math.max(5, offsetTop + ph - wh),
         progress = Math.min(100, y / base * 100);
     $('#bar').css({width: progress + '%'});
 
