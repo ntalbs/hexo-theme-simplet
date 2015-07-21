@@ -14,17 +14,6 @@
   font-weight normal
   font-style normal
 
-@font-face
-  font-family 'icomoon'
-  src url("../fonts/icomoon.eot?-tyh1oa")
-  src url("../fonts/icomoon.eot?#iefix-tyh1oa") format("embedded-opentype"),
-      url("../fonts/icomoon.woff?-tyh1oa") format("woff"),
-      url("../fonts/icomoon.ttf?-tyh1oa") format("truetype"),
-      url("../fonts/icomoon.svg?-tyh1oa#icomoon") format("svg")
-  font-weight normal
-  font-style normal
-
-
 /* Apply these base styles to all icons */
 .icon-ghost:before
 .icon-feed:before
@@ -462,14 +451,11 @@ selection
 #article-nav:after
   clear both
 
-#article-nav-older:after, #article-nav-newer:before
-  font-family icomoon
-
 #article-nav-newer
   float left
   text-decoration none
   &:before
-    content "\f060"
+    content "<"
     vertical-align middle
 
 #article-nav-older
@@ -478,7 +464,7 @@ selection
   text-align right
   color #d9534f
   &:after
-    content "\f061"
+    content ">"
     vertical-align middle
 
 .article-nav-title
@@ -510,21 +496,41 @@ selection
     margin-right 5px
   .prev, .next
     white-space nowrap
-    font-family icomoon
     vertical-align top
   .prev
     margin-right 20px
     &:before
-      content '\f060'
+      content '<'
       margin-right 5px
       vertical-align middle
   .next
     margin-left 20px
     color #d9534f
     &:after
-      content '\f061'
+      content '>'
       margin-left 5px
       vertical-align middle
+
+.label
+  border-radius .25em
+  color #fff
+  display inline
+  font-size 75%
+  font-weight bold
+  line-height 1
+  padding .2em .6em .3em
+  text-align center
+  vertical-align baseline
+  white-space nowrap
+
+.label-danger
+  background-color #d9534f
+
+.label-primary
+  background-color #428bca
+
+.label-info
+  background-color #5bc0de
 
 #comment
   clear both
