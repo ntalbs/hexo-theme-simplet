@@ -276,13 +276,24 @@ table
   -webkit-transform translate3d(0,0,0)
   z-index 1030
 
-.navbar-brand
-  color #bbb
+.navbar-header
   float left
+
+.navbar-right
+  float right
+
+.navbar-brand
+  float left
+  text-decoration none
+  color #bbb
   font-size 18px
   height 50px
   line-height 20px
   padding 15px
+  margin-left -15px
+  &:focus, &:hover
+    text-decoration none
+    color #ccc
 
 .navbar-nav
   float left
@@ -295,9 +306,12 @@ table
     a
       color #bbb
       font-size 1.8em
-      padding-top 15px
-      padding-bottom 15px
-      padding-right 15px
+      padding 10px 15px
+      display block
+      position relative
+      text-decoration none
+      &:focus, &:hover
+        color #ccc
 
 .sr-only
   border 0
@@ -656,6 +670,10 @@ selection
       padding 40px 0
   .page-head .post-title
     font-size 4rem
+
+@media only screen and (min-width: 768px)
+  .navbar-toggle
+    display none
 
 @media only screen and (max-width: 640px)
   .blog-description
