@@ -1,0 +1,123 @@
+/*
+
+grayscale style (c) MY Sun <simonmysun@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #eee;
+  -webkit-text-size-adjust: none;
+}
+
+.comment,
+.diff .header {
+  color: #777;
+  font-style: italic;
+}
+
+.keyword,
+.css .rule .keyword,
+.winutils,
+.nginx .title,
+.subst,
+.request,
+.status {
+  color: #000;
+  font-weight: bold;
+}
+
+.number,
+.hexcolor,
+.ruby .constant {
+  color: #777;
+}
+
+.string,
+.tag .value,
+.doctag,
+.tex .formula {
+  color: #888;
+}
+
+.title,
+.id,
+.scss .preprocessor {
+  color: #000;
+  font-weight: bold;
+}
+
+.list .keyword,
+.subst {
+  font-weight: normal;
+}
+
+.class .title,
+.type,
+.vhdl .literal,
+.tex .command {
+  color: #333;
+  font-weight: bold;
+}
+
+.tag,
+.tag .title,
+.rule .property,
+.django .tag .keyword {
+  color: #333;
+}
+
+.attribute,
+.variable,
+.lisp .body,
+.name {
+  color: #000;
+}
+
+.regexp {
+    color: #333;
+    background-color: #ccc;
+}
+
+.symbol,
+.ruby .symbol .string,
+.lisp .keyword,
+.clojure .keyword,
+.scheme .keyword,
+.tex .special,
+.prompt {
+  color: #000;
+}
+
+.built_in {
+  color: #000;
+  font-weight: bold;
+}
+
+.preprocessor,
+.pragma,
+.pi,
+.doctype,
+.shebang,
+.cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.addition {
+  background-color: #baeeba;
+}
+
+.deletion {
+  background-color: #ffc8bd;
+}
+
+.diff .change {
+}
+
+.chunk {
+  color: #aaa;
+}
