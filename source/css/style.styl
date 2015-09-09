@@ -103,10 +103,12 @@ p
   text-align justify
 
 a
-  color #2773B8
+  //color #2773B8
+  color #666
   transition color ease 0.3s
   &:hover
-    color #57A3E8
+    //color #57A3E8
+    color #999
 
 strong
   font-weight bold
@@ -143,7 +145,8 @@ blockquote
     text-align left
     margin 0
     font-style normal
-    color green
+    // color green
+    color #444
   small
     display inline-block
     margin 0.8em 0 0.8em 1.5em
@@ -206,7 +209,7 @@ pre.console
   padding 10px
   border-radius 5px
   color #eee
-  background-color #223
+  background-color #444
   letter-spacing -1px
 
 div.box
@@ -409,7 +412,8 @@ table
 
 #bar
   // background-color #089378
-  background-color #0898b3
+  // background-color #0898b3
+  background-color #888
   width 0
   height 100%
   position absolute
@@ -438,7 +442,8 @@ table
   padding-top 0
   margin-top 0
   margin-bottom 0
-  color #b9c8e0
+  //color #b9c8e0
+  color #aaa
   +h1
     margin-top 0
 
@@ -472,8 +477,11 @@ selection
     text-decoration none
     border 1px dotted #bbb
     &:hover
+      // color #fff
+      // background-color #428bca
       color #fff
-      background-color #428bca
+      background-color #999
+      border 1px solid #888
     sup
       &:before
         content "("
@@ -528,7 +536,7 @@ selection
   float right
   text-decoration none
   text-align right
-  color #d9534f
+  // color #d9534f
   &:after
     content ">"
     vertical-align middle
@@ -571,7 +579,7 @@ selection
       vertical-align middle
   .next
     margin-left 20px
-    color #d9534f
+    // color #d9534f
     &:after
       content '>'
       margin-left 5px
