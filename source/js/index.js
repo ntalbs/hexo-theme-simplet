@@ -36,4 +36,23 @@
   if ($h1.length) {
     initProgress($h1);
   }
+
+
+  var $pane = $('.navbar-items'),
+      height = $pane.height();
+  $('.navbar-toggle').on('click', function (e) {
+    if ($pane.hasClass('initial')) {
+      // 이 블럭은 페이지가 로딩된 후 처음 버튼을 클릭했을 때만 실행된다.
+      $pane.height(0);
+      $pane.removeClass('initial');
+      $pane.addClass('collapsed');
+    }
+    if ($pane.hasClass('collapsed')) {
+      $pane.height(height);
+      $pane.removeClass('collapsed');
+    } else {
+      $pane.height(0);
+      $pane.addClass('collapsed');
+    }
+  });
 }(jQuery));
