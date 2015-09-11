@@ -39,6 +39,7 @@
 
 
   var $pane = $('.navbar-items'),
+      $button = $('.navbar-toggle'),
       height = $pane.height();
   $('.navbar-toggle').on('click', function (e) {
     if ($pane.hasClass('initial')) {
@@ -50,9 +51,11 @@
     if ($pane.hasClass('collapsed')) {
       $pane.height(height);
       $pane.removeClass('collapsed');
+      $button.text('--');
     } else {
       $pane.height(0);
       $pane.addClass('collapsed');
+      $button.text('+');
     }
   });
 }(jQuery));
