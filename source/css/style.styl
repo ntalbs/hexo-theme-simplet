@@ -495,18 +495,19 @@ selection
 #article-nav-newer
   float left
   text-decoration none
-  // &:before
-  //   content "<"
-  //   vertical-align middle
+  &:before
+    content "<"
+    vertical-align middle
+    font-weight bold
 
 #article-nav-older
   float right
   text-decoration none
   text-align right
-  // color #d9534f
-  // &:after
-  //   content ">"
-  //   vertical-align middle
+  &:after
+    content ">"
+    vertical-align middle
+    font-weight bold
 
 .article-nav-title
   display inline-block
@@ -542,17 +543,18 @@ selection
     vertical-align top
   .prev
     margin-right 20px
-    // &:before
-    //   content '<'
-    //   margin-right 5px
-    //   vertical-align middle
+    &:before
+      content '<'
+      margin-right 5px
+      vertical-align middle
+      font-weight bold
   .next
     margin-left 20px
-    // color #d9534f
-    // &:after
-    //   content '>'
-    //   margin-left 5px
-    //   vertical-align middle
+    &:after
+      content '>'
+      margin-left 5px
+      vertical-align middle
+      font-weight bold
 
 .label
   border-radius .25em
