@@ -686,12 +686,15 @@ selection
     border-top 1px solid transparent
     ul
       padding 0
-    -moz-transition all .3s ease
-    -ms-transition all .3s ease
-    -o-transition all .3s ease
-    transition all .3s ease
-  .navbar-items.initial
-      display none
+  .navbar-items
+    -moz-transition max-height .3s ease
+    -ms-transition max-height .3s ease
+    -o-transition max-height .3s ease
+    transition max-height .3s ease
+    &.collapsed
+      max-height 0
+    &.expanded
+      max-height 500px
   .navbar li
     float none
     a
