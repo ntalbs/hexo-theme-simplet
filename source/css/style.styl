@@ -633,6 +633,10 @@ selection
   display none!important
   visibility hidden!important
 
+.collapsed
+  max-height 0
+  overflow hidden
+
 @media only screen and (max-width: 900px)
   blockquote
     margin-left 0
@@ -684,17 +688,15 @@ selection
     border-color #333
     box-shadow inset 0 1px 0 rgba(255,255,255,0.1)
     border-top 1px solid transparent
-    ul
-      padding 0
-  .navbar-items
+    max-height 500px
     -moz-transition max-height .3s ease
     -ms-transition max-height .3s ease
     -o-transition max-height .3s ease
     transition max-height .3s ease
     &.collapsed
       max-height 0
-    &.expanded
-      max-height none
+    ul
+      padding 0
   .navbar li
     float none
     a
