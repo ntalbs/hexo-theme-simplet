@@ -37,16 +37,8 @@
     initProgress($h1);
   }
 
-  var $pane = $('.navbar-items'),
-      $button = $('.navbar-toggle');
-
-  $('.navbar-toggle').on('click', function (e) {
-    if ($pane.hasClass('collapsed')) {
-      $pane.removeClass('collapsed').addClass('expanded');
-      $button.text('--');
-    } else {
-      $pane.removeClass('expanded').addClass('collapsed');
-      $button.text('+');
-    }
+  $('[data-toggle=collapse]').on('click', function (e) {
+    var target = $(this).attr('data-target');
+    $(target).toggleClass('collapsed');
   });
 }(jQuery));
