@@ -3,7 +3,7 @@
 <% var year, prev_year = 0, first = true; %>
 
 <main class="container" role="main">
-  <% site.posts.each(function(post) { %>
+  <% site.posts.sort('date', -1).each(function(post) { %>
   <% var year = post.date.year(); %>
     <% if (year !== prev_year) {%>
       </ul>
