@@ -3,7 +3,7 @@
 <% var year, prev_year = 0, first = true; %>
 
 <main class="container" role="main">
-  <% site.posts.each(function(post) { %>
+  <% site.posts.sort('date', -1).each(function(post) { %>
   <% var year = post.date.year(); %>
   <% var tags = post.tags.map(function (t) { return t.name; }); %>
     <% if (tags.indexOf(page.tag) < 0) return; %>
