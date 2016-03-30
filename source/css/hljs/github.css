@@ -1,14 +1,20 @@
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
   color: #333;
-  background: #fff;
+  background: #f8f8f8;
 }
 
 .comment,
 .quote {
-  color: #777;
+  color: #998;
   font-style: italic;
 }
 
@@ -20,20 +26,22 @@
 }
 
 .number,
-.literal {
-  color: #777;
+.literal,
+.variable,
+.template-variable,
+.tag .attr {
+  color: #008080;
 }
 
 .string,
-.doctag,
-.formula {
-  color: #333;
+.doctag {
+  color: #d14;
 }
 
 .title,
 .section,
 .selector-id {
-  color: #000;
+  color: #900;
   font-weight: bold;
 }
 
@@ -41,30 +49,32 @@
   font-weight: normal;
 }
 
-.class .title,
 .type,
-.name {
-  color: #333;
+.class .title {
+  color: #458;
   font-weight: bold;
 }
 
-.tag {
-  color: #333;
+.tag,
+.name,
+.attribute {
+  color: #000080;
+  font-weight: normal;
 }
 
-.regexp {
-    color: #333;
+.regexp,
+.link {
+  color: #009926;
 }
 
 .symbol,
-.bullet,
-.link {
-  color: #000;
+.bullet {
+  color: #990073;
 }
 
 .built_in,
 .builtin-name {
-  color: #000;
+  color: #0086b3;
 }
 
 .meta {
@@ -73,11 +83,11 @@
 }
 
 .deletion {
-  color: #fff;
+  background: #fdd;
 }
 
 .addition {
-  color: #000;
+  background: #dfd;
 }
 
 .emphasis {

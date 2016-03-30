@@ -1,163 +1,71 @@
 /*
-
 XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
-
 */
 
-.highlight {
+.hljs {
   display: block;
   overflow-x: auto;
-  /* padding: 0.5em; */
+  padding: 0.5em;
   background: #fff;
   color: black;
-  -webkit-text-size-adjust: none;
-}
-
-.highlight figcaption {
-  margin: -10px -10px 5px -10px;
-  padding: 0 10px 0 10px;
-  font-size: .9em;
-  color: #999;
-  background-color: #efefef;
-}
-
-.highlight figcaption:after,
-.highlight figcaption:before {
-  content: "";
-  display: table;
-}
-
-.highlight figcaption a {
-  float: right;
 }
 
 .comment,
-.template_comment,
-.javadoc {
+.quote {
   color: #006a00;
 }
 
 .keyword,
-.literal,
-.nginx .title {
+.selector-tag,
+.literal {
   color: #aa0d91;
 }
-.method,
-.list .title,
-.tag .title,
-.setting .value,
-.winutils,
-.tex .command,
-.http .title,
-.request,
-.status {
+
+.name {
   color: #008;
 }
 
-.envvar,
-.tex .special {
+.variable,
+.template-variable {
   color: #660;
 }
 
 .string {
   color: #c41a16;
 }
-.tag .value,
-.cdata,
-.filter .argument,
-.attr_selector,
-.apache .cbracket,
-.date,
-.regexp {
+
+.regexp,
+.link {
   color: #080;
 }
 
-.sub .identifier,
-.pi,
+.title,
 .tag,
-.tag .keyword,
-.decorator,
-.ini .title,
-.shebang,
-.prompt,
-.hexcolor,
-.rules .value,
 .symbol,
-.symbol .string,
+.bullet,
 .number,
-.css .function,
-.function .title,
-.coffeescript .attribute {
+.meta {
   color: #1c00cf;
 }
 
+.section,
 .class .title,
-.smalltalk .class,
-.javadoctag,
-.yardoctag,
-.phpdoc,
-.dartdoc,
 .type,
-.typename,
-.tag .attribute,
-.doctype,
-.class .id,
+.attr,
 .built_in,
-.setting,
-.params,
-.clojure .attribute {
+.builtin-name,
+.params {
   color: #5c2699;
 }
 
-.variable {
- color: #3f6e74;
-}
-.css .tag,
-.rules .property,
-.pseudo,
+.attribute,
 .subst {
   color: #000;
 }
 
-.css .class,
-.css .id {
-  color: #9b703f;
-}
-
-.value .important {
-  color: #ff7700;
-  font-weight: bold;
-}
-
-.rules .keyword {
-  color: #c5af75;
-}
-
-.annotation,
-.apache .sqbracket,
-.nginx .built_in {
-  color: #9b859d;
-}
-
-.preprocessor,
-.preprocessor *,
-.pragma {
-  color: #643820;
-}
-
-.tex .formula {
+.formula {
   background-color: #eee;
   font-style: italic;
-}
-
-.diff .header,
-.chunk {
-  color: #808080;
-  font-weight: bold;
-}
-
-.diff .change {
-  background-color: #bccff9;
 }
 
 .addition {
@@ -168,10 +76,16 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
   background-color: #ffc8bd;
 }
 
-.comment .yardoctag {
+.selector-id,
+.selector-class {
+  color: #9b703f;
+}
+
+.doctag,
+.strong {
   font-weight: bold;
 }
 
-.method .id {
-  color: #000;
+.emphasis {
+  font-style: italic;
 }
