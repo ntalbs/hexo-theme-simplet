@@ -504,8 +504,8 @@ selection
   text-decoration none
   margin-right 10px
   &:before
-    content "<"
-    vertical-align middle
+    content "< "
+    vertical-align top
     font-weight bold
 
 #article-nav-older
@@ -514,8 +514,8 @@ selection
   text-align right
   margin-left 10px
   &:after
-    content ">"
-    vertical-align middle
+    content " >"
+    vertical-align top
     font-weight bold
 
 .article-nav-title
@@ -550,20 +550,17 @@ selection
   .prev, .next
     white-space nowrap
     vertical-align top
+    font-size 16.2px
   .prev
     margin-right 20px
-    &:before
-      content '<'
-      margin-right 5px
-      vertical-align middle
-      font-weight bold
+    margin-right 5px
+    vertical-align top
+    font-weight bold
   .next
     margin-left 20px
-    &:after
-      content '>'
-      margin-left 5px
-      vertical-align middle
-      font-weight bold
+    margin-left 5px
+    vertical-align top
+    font-weight bold
 
 .label
   border-radius .25em
