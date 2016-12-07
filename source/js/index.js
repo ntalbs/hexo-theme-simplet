@@ -55,4 +55,14 @@
     var target = $(this).attr('data-target')
     $(target).toggleClass('collapsed')
   })
+
+  function minHeight () {
+    var wh = $(window).height()
+    var hh = $('header').height()
+    var fh = $('footer').outerHeight(true)
+    var minHeight = wh - hh - fh - 20 // 20 for adjustment
+    return minHeight + 'px'
+  }
+
+  $('main').css('min-height', minHeight())
 }(jQuery))
