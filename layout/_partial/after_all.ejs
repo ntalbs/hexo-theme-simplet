@@ -18,7 +18,7 @@
 
 </script>
 <% } %>
-<% if (config.disqus_shortname && !is_tag()){ %>
+<% if (config.disqus_shortname && is_post()){ %>
 <script type="text/javascript">
     var disqus_shortname = '<%= config.disqus_shortname %>';
 
