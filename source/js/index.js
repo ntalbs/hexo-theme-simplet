@@ -46,6 +46,18 @@
     })
   }
 
+  function initShortcut () {
+    $(document).on('keydown', function (e) {
+      if (e.keyCode === 74 /* j */ || (e.ctrlKey && e.keyCode === 78 /* C-n */)) {
+        window.scrollBy(0, 100)
+      } else if (e.keyCode === 75 /* k */ || (e.ctrlKey && e.keyCode === 80 /* C-p */)) {
+        window.scrollBy(0, -100)
+      }
+    })
+  }
+
+  initShortcut()
+
   var $h1 = $('h1')
   if ($h1.length) {
     initProgress($h1)
