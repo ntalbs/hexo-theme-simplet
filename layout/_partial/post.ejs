@@ -18,7 +18,9 @@
       <%- post.content %>
       <div class="button-box">
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a>
+        <% if (config.twitter_username) { %>
         <a class="twitter-follow-button" href="https://twitter.com/<%= config.twitter_username %>" data-show-count="false">Follow @<%= config.twitter_username %></a>
+        <% } %>
       </div>
     </section>
 
