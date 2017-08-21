@@ -3,15 +3,30 @@
 <% var year, prev_year = 0, first = true; %>
 
 <main class="container" role="main">
-  <% site.posts.sort('date', -1).each(function(post) { %>
-  <% var year = post.date.year(); %>
-    <% if (year !== prev_year) {%>
+  <div class="widget">
+    <ul class=" tag-box inline list-unstyled">
+      <% if (page.year) { %>
+      <li><a href="<%= config.root + config.archive_dir %>">All</a></li>
+      <% } %>
+      <% var years = _.uniq(site.posts.sort('date', -1).map(p => p.date.year())) %>
+      <% years.forEach(function (year) { %>
+      <li><a href="<%= config.root + config.archive_dir + "/" + year %>"><%= year %></a></li>
+      <% }); %>
+    </ul>
+  </div>
+
+  <% var archives = site.posts.filter(p => !page.year || p.date.year() === page.year) %>
+  <% archives.sort('date', -1).each(function (post) { %>
+    <% var year = post.date.year(); %>
+    <% if (year !== prev_year && prev_year !== 0) { %>
       </ul>
-    <p class="archive-ul" data-toggle="collapse" data-target="#<%= year %>">
+    <% } %>
+    <% if (year !== prev_year) {%>
+      <p class="archive-ul" data-toggle="collapse" data-target="#<%= year %>">
         <%= year %>&nbsp;<b class="caret"></b>
-    </p>
-    <ul id="<%= year %>"class="in">
-    <% prev_year = year %>
+      </p>
+      <ul id="<%= year %>"class="in">
+      <% prev_year = year %>
     <% } %>
     <li class="listing-item">
       <p class="post-title">
@@ -23,5 +38,4 @@
     </li>
   <% }); %>
     </ul>
-
 </main>
