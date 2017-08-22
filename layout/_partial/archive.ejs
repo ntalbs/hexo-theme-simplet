@@ -4,13 +4,15 @@
 
 <main class="container" role="main">
   <div class="widget">
-    <ul class=" tag-box inline list-unstyled">
-      <% if (page.year) { %>
-      <li><a href="<%= config.root + config.archive_dir %>">All</a></li>
-      <% } %>
+    <ul class="tag-box inline list-unstyled">
+      <li>
+        <a href="<%= config.root + config.archive_dir %>">All</a>
+      </li>
       <% var years = _.uniq(site.posts.sort('date', -1).map(p => p.date.year())) %>
       <% years.forEach(function (year) { %>
-      <li><a href="<%= config.root + config.archive_dir + "/" + year %>"><%= year %></a></li>
+      <li>
+        <a href="<%= config.root + config.archive_dir + "/" + year %>"><%= year %></a>
+      </li>
       <% }); %>
     </ul>
   </div>
