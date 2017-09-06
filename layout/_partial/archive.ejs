@@ -7,9 +7,9 @@
     <ul class="tag-box inline list-unstyled">
       <% var years = _.uniq(site.posts.sort('date', -1).map(p => p.date.year())) %>
       <% years.forEach(function (year) { %>
-      <li>
-        <a href="<%= config.root + config.archive_dir + "/" + year %>"><%= year %></a>
-      </li>
+        <li>
+          <a href="<%= config.root + config.archive_dir + "/" + year %>"><%= year %></a>
+        </li>
       <% }); %>
     </ul>
   </div>
@@ -18,16 +18,16 @@
   <% archives.sort('date', -1).each(function (post) { %>
     <% var year = post.date.year(); %>
     <% if (year !== prev_year && prev_year !== 0) { %>
-      </ul>
+    </ul>
     <% } %>
     <% if (year !== prev_year) {%>
       <% if (!page.year) { %>
-      <p class="archive-ul" data-toggle="collapse" data-target="#<%= year %>">
-        <%= year %>&nbsp;<b class="caret"></b>
-      </p>
+        <p class="archive-ul" data-toggle="collapse" data-target="#<%= year %>">
+          <%= year %>&nbsp;<b class="caret"></b>
+        </p>
       <% } %>
       <ul id="<%= year %>"class="in">
-      <% prev_year = year %>
+        <% prev_year = year %>
     <% } %>
     <li class="listing-item">
       <p class="post-title">
@@ -38,5 +38,5 @@
       </p>
     </li>
   <% }); %>
-    </ul>
+      </ul>
 </main>

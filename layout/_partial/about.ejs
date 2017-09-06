@@ -10,16 +10,16 @@
       <%- page.content %>
     </section>
     <% if (config.twitter_username || config.github_username) { %>
-    <div class="button-box">
-      <% if (config.twitter_username) { %>
-      <!-- twitter follow button -->
-      <a class="twitter-follow-button" href="https://twitter.com/<%= config.twitter_username %>" data-show-count="false">Follow @<%= config.twitter_username %></a>
-      <% } %>
-      <% if (config.github_username) { %>
-      <!-- github follow button -->
-      <a class="github-button" href="https://github.com/<%= config.github_username %>" aria-label="Follow @ntalbs on GitHub">Follow @<%= config.github_username %></a>
-      <% } %>
-    </div>
+      <div class="button-box">
+        <% if (config.twitter_username) { %>
+          <!-- twitter follow button -->
+          <a class="twitter-follow-button" href="https://twitter.com/<%= config.twitter_username %>" data-show-count="false">Follow @<%= config.twitter_username %></a>
+        <% } %>
+        <% if (config.github_username) { %>
+          <!-- github follow button -->
+          <a class="github-button" href="https://github.com/<%= config.github_username %>" aria-label="Follow @ntalbs on GitHub">Follow @<%= config.github_username %></a>
+        <% } %>
+      </div>
     <% } %>
   </article>
 </main>

@@ -19,32 +19,32 @@
       <div class="button-box">
         <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a>
         <% if (config.twitter_username) { %>
-        <a class="twitter-follow-button" href="https://twitter.com/<%= config.twitter_username %>" data-show-count="false">Follow @<%= config.twitter_username %></a>
+          <a class="twitter-follow-button" href="https://twitter.com/<%= config.twitter_username %>" data-show-count="false">Follow @<%= config.twitter_username %></a>
         <% } %>
       </div>
     </section>
 
     <footer class="post-footer">
       <% if (post.prev || post.next){ %>
-      <nav id="article-nav">
-        <% if (post.prev){ %>
-        <a href="<%- config.root %><%- post.prev.path %>" id="article-nav-newer" class="article-nav-link-wrap">
-          <span class="article-nav-title"><%= (post.prev.title) ? post.prev.title : "(no title)" %></span>
-        </a>
-        <% } %>
-        <% if (post.next){ %>
-        <a href="<%- config.root %><%- post.next.path %>" id="article-nav-older" class="article-nav-link-wrap">
-          <span class="article-nav-title"><%= (post.next.title) ? post.next.title : "(no title)" %></span>
-        </a>
-        <% } %>
-      </nav>
+        <nav id="article-nav">
+          <% if (post.prev){ %>
+            <a href="<%- config.root %><%- post.prev.path %>" id="article-nav-newer" class="article-nav-link-wrap">
+              <span class="article-nav-title"><%= (post.prev.title) ? post.prev.title : "(no title)" %></span>
+            </a>
+          <% } %>
+          <% if (post.next){ %>
+            <a href="<%- config.root %><%- post.next.path %>" id="article-nav-older" class="article-nav-link-wrap">
+              <span class="article-nav-title"><%= (post.next.title) ? post.next.title : "(no title)" %></span>
+            </a>
+          <% } %>
+        </nav>
       <% } %>
 
       <section id="comment">
         <% if(config.disqus_shortname) { %>
-        <div id="disqus_thread">
-          <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
+          <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
         <% } %>
       </section>
     </footer>

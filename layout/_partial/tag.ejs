@@ -6,24 +6,24 @@
   <div class="widget">
     <ul class=" tag-box inline list-unstyled">
       <% site.tags.sort('name').each(function(item){ %>
-      <li><a href="<%= config.root + item.path %>"><%= item.name %><sup><%= item.posts.length %></sup></a></li>
+        <li><a href="<%= config.root + item.path %>"><%= item.name %><sup><%= item.posts.length %></sup></a></li>
       <% }); %>
     </ul>
   </div>
 
   <ul>
-  <% site.posts.sort('date', -1).each(function(post) { %>
-  <% var year = post.date.year(); %>
-  <% var tags = post.tags.map(function (t) { return t.name; }); %>
-    <% if (tags.indexOf(page.tag) < 0) return; %>
-    <li class="listing-item">
-      <p class="post-title">
-        <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
-        <small class="post-meta">
-          <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, null) %></time>
-        </small>
-      </p>
-    </li>
-  <% }); %>
+    <% site.posts.sort('date', -1).each(function(post) { %>
+      <% var year = post.date.year(); %>
+      <% var tags = post.tags.map(function (t) { return t.name; }); %>
+      <% if (tags.indexOf(page.tag) < 0) return; %>
+      <li class="listing-item">
+        <p class="post-title">
+          <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
+          <small class="post-meta">
+            <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, null) %></time>
+          </small>
+        </p>
+      </li>
+    <% }); %>
   </ul>
 </main>
