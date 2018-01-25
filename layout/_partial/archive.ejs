@@ -24,10 +24,10 @@
       <% archives[page.year].sort((a,b) => b.date - a.date).forEach(post => { %>
         <li class="listing-item">
           <p class="post-title">
-            <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
             <small class="post-meta">
               <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, null) %></time>
             </small>
+            <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
           </p>
         </li>
       <% }) %>
@@ -41,10 +41,10 @@
         <% archives[year].sort((a,b) => b.date - a.date).forEach(post => { %>
           <li class="listing-item">
             <p class="post-title">
-              <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
               <small class="post-meta">
                 <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, null) %></time>
               </small>
+              <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
             </p>
           </li>
         <% }) %>

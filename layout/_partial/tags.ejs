@@ -19,10 +19,10 @@
             <% if (it.tags.data.map(function (e) { return e.name;; }).indexOf(item.name) > -1){ %>
               <li class="listing-item">
                 <p class="post-title">
-                  <a href="<%= config.root %><%= it.path %>" <% if (it.description) { %> title="<%= it.description %>" <% } %>><%= it.title %></a>
                   <small class="post-meta">
                     <time datetime="<%= date_xml(it.date) %>" itemprop="datePublished"><%= date(it.date, null) %></time>
                   </small>
+                  <a href="<%= config.root %><%= it.path %>" <% if (it.description) { %> title="<%= it.description %>" <% } %>><%= it.title %></a>
                 </p>
               </li>
             <% } %>
