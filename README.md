@@ -1,4 +1,4 @@
-hexo-theme-simplet
+hexo-theme-simplex
 ==================
 
 Hexo theme, clean and simple.
